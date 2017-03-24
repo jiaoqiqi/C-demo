@@ -3,11 +3,13 @@
 void MergeSort(int *a,int begin,int end,int *temp);
 void MergeArray(int *a,int begin,int mid,int end,int *temp);
 
-int main(int argc, const char * argv[])
+int main()
 {
     int num[] = {2,5,9,3,6,1,0,7,4,8};
     int temp[10]; // 注意：归并排序需要大小为n的辅助空间，所以空间复杂度为O(n)
+
     MergeSort(num,0,9,temp);
+    
     for(int i = 0;i < 10;i++)
     {
         printf("%d ",num[i]);
