@@ -1,7 +1,4 @@
-// #include <iostream>  
-  
-// using namespace std;
-#include <stdio.h>  
+  #include <stdio.h>  
   
 int getMax(int m, int n)  
 {  
@@ -12,11 +9,9 @@ int main()
 {  
     int road[100][100] = {0};  
     int n = 0;  
-    // cin >> n; 
     scanf("%d",&n); 
     for(int i=0; i<n; i++) {  
         for (int j=0; j<=i; j++) {  
-            // cin >> road[i][j]; 
             scanf("%d",&road[i][j]); 
         }  
     }  
@@ -37,7 +32,6 @@ int main()
     for(int i=0; i<n; i++) {  
         if(dist[n-1][i]>maxSum) maxSum = dist[n-1][i];  
     }  
-    // cout << maxSum << endl;  
     printf("%d\n",maxSum );
     return 0;  
 }  
