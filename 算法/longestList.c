@@ -40,6 +40,7 @@ int lis(int arr[], int len)
     }
     for(int i=0;i<max;i++)
         printf("%d ",temp[i]);
+    free(temp);
     return max;
 
 }  
