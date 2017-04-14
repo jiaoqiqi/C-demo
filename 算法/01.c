@@ -1,16 +1,10 @@
 #include <stdio.h>
 int m[100][100];
 int min(int a,int b){
-	if (a>b){
-		return b;
-	}
-	else return a;
+	return a<b?a:b; 
 }
 int max(int a,int b){
-	if(a>b)
-		return a;
-	else 
-		return b;
+	return a>b?a:b; 
 }
 void knapsack(int v[],int w[],int c,int n){
 	int jMax = min(w[n]-1,c);

@@ -3,9 +3,7 @@
 int V[200][200];//前i个物品装入容量为j的背包中获得的最大价值
 int max(int a,int b)
 {
-   if(a>=b)
-       return a;
-   else return b;
+   return a>b?a:b;  
 }
 
 int KnapSack(int n,int w[],int v[],int x[],int C)
