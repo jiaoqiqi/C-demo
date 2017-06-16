@@ -25,7 +25,7 @@ int lis(int arr[], int len)
         if (longest[j] > max) 
             max = longest[j];    
     } 
-    printf("The longgest length is :%d\n",max );
+    printf("最长递增子序列是 : %d\n",max );
 
     //printf the longest list
     int *temp;
@@ -38,6 +38,7 @@ int lis(int arr[], int len)
             k--;
         }
     }
+	printf("最长递增子序列为：");
     for(int i=0;i<max;i++)
         printf("%d ",temp[i]);
     free(temp);
@@ -47,7 +48,7 @@ int lis(int arr[], int len)
   
 int main()  
 {  
-    int arr[] = {1, 4, 5, 6, 2, 3, 8};  
+    int arr[] = {1, 2, 8, 7, 2, 3, 1};  
     lis(arr, len(arr));
     return 0;  
 }  

@@ -30,7 +30,7 @@ void knapsack(int v[],int w[],int c,int n){
 	m[1][c] = m[2][c];
 	if(c>= w[1])
 		m[1][c] = max(m[1][c] , m[2][c-w[1]]+v[1]);
-	printf("%d\n",m[1][c] );
+	printf("获得的最大价值为：%d\n",m[1][c] );
 
 }
 
@@ -45,6 +45,7 @@ void traceback(int w[],int c ,int n,int x[]){
 		}
 	}
 	x[n] = (m[n][c]) ? 1:0;
+	printf("物品选择情况为： ");
 	for(i=1 ; i<=n ; i++){
 		printf("%d",x[i]);
 	}
@@ -53,14 +54,14 @@ void traceback(int w[],int c ,int n,int x[]){
 void main(){
 	int n,c;
 	int i,j;
-	printf("please input the count ");
+	printf("请输入物品总量：  ");
 	scanf("%d" , &n);
-	printf("please input the biggest back " );
+	printf("请输入背包的最大容量： " );
 	scanf("%d" , &c);
 	int w[n+1];
 	int v[n+1];
 	int x[n+1];
-	
+	printf("请输入每个物品的重量及其价值： \n");
 	for(i=1 ; i<=n ; i++){
 		scanf("%d%d",&w[i],&v[i]);
 	}
